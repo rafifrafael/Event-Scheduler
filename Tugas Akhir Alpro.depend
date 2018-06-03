@@ -1,0 +1,25 @@
+# depslib dependency file v1.0
+1527054174 source:c:\users\alafif\desktop\tugas akhir alpro\main.c
+	"pustaka.h"
+
+1527054044 source:c:\users\alafif\desktop\tugas akhir alpro\pustaka.c
+	"pustaka.h"
+
+1527053980 c:\users\alafif\desktop\tugas akhir alpro\pustaka.h
+	<stdio.h>
+	<stdlib.h>
+	<stdbool.h>
+	<time.h>
+
+1527054174 source:c:\users\dolippu\downloads\tugas akhir alpro\tugas akhir alpro\main.c
+	"pustaka.h"
+
+1527871863 c:\users\dolippu\downloads\tugas akhir alpro\tugas akhir alpro\pustaka.h
+	<stdio.h>
+	<stdlib.h>
+	<stdbool.h>
+	<time.h>
+
+1527871605 source:c:\users\dolippu\downloads\tugas akhir alpro\tugas akhir alpro\pustaka.c
+	"pustaka.h"
+
