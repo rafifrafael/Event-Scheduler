@@ -25,14 +25,22 @@ void errorWaktu()
 
 void jumlahhari (int *jmlh_hari,int bulan, int  tahun)
 {
-    if (bulan == 1 || bulan == 3 || bulan == 5 || bulan == 7 || bulan==8 || bulan == 10 || bulan ==12){   ///kondisi untuk bulan yang memiliki jumlah hari 31
+    if (bulan == 1 || bulan == 3 || bulan == 5 || bulan == 7 || bulan==8 || bulan == 10 || bulan ==12)
+    {   ///kondisi untuk bulan yang memiliki jumlah hari 31
         *jmlh_hari = 31;
-    }else if(bulan == 4|| bulan == 6 || bulan == 9 || bulan == 11){  ///kondisi untuk bulan yang memiliki jumlah hari 30
+    }
+    else if(bulan == 4|| bulan == 6 || bulan == 9 || bulan == 11)
+    {  ///kondisi untuk bulan yang memiliki jumlah hari 30
         *jmlh_hari = 30;
-    }else if (bulan == 2){  ///kondisi untuk bulan februari
-        if (tahun %4 ==0 && tahun %100 != 0 || tahun %400 == 0){  ///kondisi untuk bulan februari dengan tahun kabisat
+    }
+    else if (bulan == 2)
+    {  ///kondisi untuk bulan februari
+        if (tahun %4 ==0 && tahun %100 != 0 || tahun %400 == 0)
+        {  ///kondisi untuk bulan februari dengan tahun kabisat
             *jmlh_hari = 29;
-        }else {             ///kondisi untuk bulan februari selain tahun kabisat
+        }
+        else
+        {  ///kondisi untuk bulan februari selain tahun kabisat
             *jmlh_hari = 28;
         }
     }
@@ -44,31 +52,17 @@ void errorTgl()
 	int i=0;
 	int jumlah_hari;
 
+
     jumlahhari(&jumlah_hari, data[banyakData-1].tgl.mm, data[banyakData-1].tgl.yyyy);
     if(data[banyakData-1].tgl.dd<1 || data[banyakData-1].tgl.dd>jumlah_hari || data[banyakData-1].tgl.mm<1 || data[banyakData-1].tgl.mm>12 || data[banyakData-1].tgl.yyyy<2017)
     {
         printf("Tanggal yang anda masukkan salah!");
+        banyakData--;
         getch();
         fflush(stdin);
         system("cls");
         main();
     }
-	/*else if(data[i].tgl.mm<1 || data[i].tgl.mm>12)
-    {
-        printf("Tanggal yang anda masukkan salah!");
-        getch();
-        fflush(stdin);
-        system("cls");
-        main();
-    }
-	else if(data[i].tgl.yyyy<2017)
-    {
-        printf("Tanggal yang anda masukkan salah!");
-        getch();
-        fflush(stdin);
-        system("cls");
-        main();
-    }*/
 }
 
 int waktuSekarang()
@@ -138,15 +132,6 @@ void input()
 			scanf("%d-%d-%d",&data[banyakData-1].tgl.dd,&data[banyakData-1].tgl.mm,&data[banyakData-1].tgl.yyyy);
 			errorTgl();
             }
-			/*jumlahhari(&jumlah_hari, data[banyakData-1].tgl.mm, data[banyakData-1].tgl.yyyy);
-			if(data[i].tgl.dd<1 || data[i].tgl.dd>jumlah_hari || data[i].tgl.mm<1 || data[i].tgl.mm>12 || data[i].tgl.yyyy<2017)
-            {
-                printf("Tanggal yang anda masukkan salah!");
-                getch();
-                fflush(stdin);
-                system("cls");
-                main();
-            }*/
 
 			printf("Masukkan Waktu Mulai Kegiatan(hh:mm)\t= ");
 			scanf("%d:%d",&data[banyakData-1].wakMulai.h1, &data[banyakData-1].wakMulai.m1);
